@@ -367,7 +367,7 @@ Main content
 
 folding panel
 
--------------------------------- */
+-------------------------------- 
 .cd-folding-panel {
   position: fixed;
   z-index: 1;
@@ -382,27 +382,26 @@ folding panel
   transition: visibility 0s 0.9s;
 }
 .cd-folding-panel .fold-left,
-.cd-folding-panel .fold-right {
-  /* the :after elements of .fold-left and .fold-right are the 2 fold sides */
+.cd-folding-panel .fold-right {       */
+  /* the :after elements of .fold-left and .fold-right are the 2 fold sides */ /*
   width: 100%;
   height: 100vh;
   overflow: hidden;
-  position: relative;
-  /* enable a 3D-space for children elements */
+  position: relative;    */
+  /* enable a 3D-space for children elements */  /*
   -webkit-perspective: 2000px;
   -moz-perspective: 2000px;
   perspective: 2000px;
 }
 .cd-folding-panel .fold-left::after,
-.cd-folding-panel .fold-right::after {
-  /* 2 fold sides */
+.cd-folding-panel .fold-right::after {    */
+  /* 2 fold sides */   /*
   content: '';
   position: absolute;
   top: 0;
   left: 0;
   height: 100%;
   width: 100%;
-  /* Force Hardware Acceleration */
   -webkit-transform: translateZ(0);
   -moz-transform: translateZ(0);
   -ms-transform: translateZ(0);
@@ -433,22 +432,20 @@ folding panel
   background-color: #c0c3c3;
 }
 .cd-folding-panel .fold-left {
-  /* on mobile only the right fold side is visible */
   display: none;
 }
 .cd-folding-panel .fold-left::after {
   background-color: #f9fafa;
 }
 .cd-folding-panel .cd-close {
-  /* 'X' close icon */
   position: absolute;
   z-index: 1;
   display: inline-block;
   top: 10px;
   right: 10px;
   height: 44px;
-  width: 44px;
-  /* image replacement */
+  width: 44px;      */
+  /* image replacement */  /*
   overflow: hidden;
   text-indent: 100%;
   white-space: nowrap;
@@ -458,7 +455,6 @@ folding panel
   transition: opacity 0.2s 0s;
 }
 .cd-folding-panel .cd-close::after, .cd-folding-panel .cd-close::before {
-  /* lines of 'X' icon */
   content: '';
   position: absolute;
   height: 3px;
@@ -534,8 +530,8 @@ folding panel
     float: left;
     height: 100%;
   }
-  .cd-folding-panel .fold-right {
-    /* change perspective-origin so that the 2 fold sides have the same vanishing point */
+  .cd-folding-panel .fold-right {     */
+    /* change perspective-origin so that the 2 fold sides have the same vanishing point */  /*
     -webkit-perspective-origin: 0% 50%;
     -moz-perspective-origin: 0% 50%;
     perspective-origin: 0% 50%;
@@ -554,7 +550,6 @@ folding panel
   }
   .cd-folding-panel .fold-left {
     display: block;
-    /* change perspective-origin so that the 2 fold sides have the same vanishing point */
     -webkit-perspective-origin: 100% 50%;
     -moz-perspective-origin: 100% 50%;
     perspective-origin: 100% 50%;
@@ -673,7 +668,7 @@ folding panel
     font-size: 1.6rem;
   }
 }
-
+ */
 /* -------------------------------- 
 
 Javascript disabled
