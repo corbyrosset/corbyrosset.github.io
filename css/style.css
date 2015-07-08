@@ -79,6 +79,7 @@ p.title {
     position:absolute;
     overflow: hidden;
     word-wrap:break-word;
+    color:#1c1726;
     
 }
 .centered {
@@ -263,10 +264,17 @@ Main content
   background-color: #9aceff; <!--8ee5ee;-->
 }
 .cd-item:nth-of-type(3) {
-  background-color: #669acc;<!--7B68EE;-->
+  background-color: #79CBFB;
+    <!--7B68EE;-->
 }
 .cd-item:nth-of-type(4) {
-  background-color: #336799;<!--4f94cd;-->
+  background-color: #4EBBFB;<!--4f94cd;-->
+}
+.cd-item:nth-of-type(5) {
+    background-color: #669acc;
+}
+.cd-item:nth-of-type(6) {
+  background-color: #336799;<!--162955;-->
 }
 .cd-item h2 {
   font-size: 2.2rem;
