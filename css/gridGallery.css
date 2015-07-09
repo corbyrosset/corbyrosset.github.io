@@ -11,6 +11,10 @@
 	font-style: normal;
 } 
 
+body {
+ background-color: #284E8A;   
+}
+
 /* General style */
 .grid-gallery ul {
 	list-style: none;
@@ -67,7 +71,7 @@
 }
 
 .grid figcaption {
-	background: #e4e4e4;
+	background: #f6f6f6;
 	padding: 25px;
 }
 
@@ -193,7 +197,7 @@
 	top: 0;
 	right: 0;
 	padding: 0.5em 1em;
-	color: #31373a;
+	color: red;
 }
 
 .icon:before,
