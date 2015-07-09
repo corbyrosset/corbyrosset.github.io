@@ -15,13 +15,15 @@ body {
   font-size: 1.6rem;
   font-family: "Open Sans", sans-serif;
   color: #363558;
-  background-color: #1c1726;
+  background-color: #f6f6f6;
 }
 
+/*
 a {
   color: #544173;
   text-decoration: none;
 }
+*/
 
 h1, h2, p {
   font-family: "Vollkorn", serif;
@@ -84,6 +86,7 @@ p.title {
 }
 .centered {
   position: absolute;
+  overflow: hidden;
   margin:auto;
   top:300px;
   left: 100px;
@@ -157,8 +160,9 @@ Main content
   -moz-transition: -moz-transform 0.5s 0.4s;
   transition: transform 0.5s 0.4s;
 }
+/*
 .cd-main.fold-is-open > * {
-  /* on mobile - translate .cd-main content to the right when the .cd-folding-panel is open */
+   on mobile - translate .cd-main content to the right when the .cd-folding-panel is open 
   -webkit-transform: translateX(100%);
   -moz-transform: translateX(100%);
   -ms-transform: translateX(100%);
@@ -168,6 +172,8 @@ Main content
   -moz-transition: -moz-transform 0.5s 0s;
   transition: transform 0.5s 0s;
 }
+*/
+/*
 @media only screen and (min-width: 600px) {
   .cd-main.fold-is-open > * {
     -webkit-transform: translateX(600px);
@@ -177,13 +183,13 @@ Main content
     transform: translateX(600px);
   }
 }
+*/
+/*
 @media only screen and (min-width: 1100px) {
   .cd-main::before {
-    /* never visible - this is used in jQuery to check the current MQ */
     content: 'desktop';
   }
   .cd-main.fold-is-open > * {
-    /* reset style - on bigger devices we translate the gallery items */
     -webkit-transform: translateX(0);
     -moz-transform: translateX(0);
     -ms-transform: translateX(0);
@@ -191,14 +197,17 @@ Main content
     transform: translateX(0);
   }
 }
+*/
 
+/*
 .cd-gallery::after {
   clear: both;
   content: "";
   display: table;
 }
+*/
+/*
 .cd-gallery::before {
-  /* this is the dark layer covering the .cd-gallery when the .cd-folding-panel is open */
   display: block;
   content: '';
   position: absolute;
@@ -214,6 +223,8 @@ Main content
   -moz-transition: opacity 0.5s 0.4s, visibility 0s 0.9s;
   transition: opacity 0.5s 0.4s, visibility 0s 0.9s;
 }
+*/
+/*
 .fold-is-open .cd-gallery::before {
   visibility: visible;
   opacity: 1;
@@ -221,12 +232,14 @@ Main content
   -moz-transition: opacity 0.5s 0s, visibility 0s 0s;
   transition: opacity 0.5s 0s, visibility 0s 0s;
 }
+*/
 
 .cd-item {
   width: 100%;
   height: 300px;
   text-align: center;
   /* Force Hardware Acceleration */
+/*
   -webkit-transform: translateZ(0);
   -moz-transform: translateZ(0);
   -ms-transform: translateZ(0);
@@ -237,6 +250,7 @@ Main content
   -webkit-transition: -webkit-transform 0.5s 0.4s;
   -moz-transition: -moz-transform 0.5s 0.4s;
   transition: transform 0.5s 0.4s;
+*/
 }
 .cd-item > a {
   display: table;
@@ -247,12 +261,14 @@ Main content
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+/*
 .cd-item > a.dark-text {
   color: #363558;
 }
 .cd-item > a.dark-text b {
   border-color: #363558;
 }
+*/
 .cd-item div {
   display: table-cell;
   vertical-align: middle;
@@ -265,7 +281,6 @@ Main content
 }
 .cd-item:nth-of-type(3) {
   background-color: #79CBFB;
-    <!--7B68EE;-->
 }
 .cd-item:nth-of-type(4) {
   background-color: #4EBBFB;<!--4f94cd;-->
@@ -352,6 +367,7 @@ Main content
     -moz-transition: opacity 0.3s 0.1s, -moz-transform 0.3s 0.1s;
     transition: opacity 0.3s 0.1s, transform 0.3s 0.1s;
   }
+/*
   .fold-is-open .cd-item {
     -webkit-transition: -webkit-transform 0.5s 0s;
     -moz-transition: -moz-transform 0.5s 0s;
@@ -369,6 +385,7 @@ Main content
     -o-transform: translateX(400px);
     transform: translateX(400px);
   }
+*/
 }
 
 /* -------------------------------- 
@@ -682,6 +699,7 @@ folding panel
 Javascript disabled
 
 -------------------------------- */
+/*
 .no-js .cd-fold-content.single-page {
   position: static;
   visibility: visible;
@@ -696,6 +714,7 @@ Javascript disabled
   -o-transform: translateY(0);
   transform: translateY(0);
 }
+*/
 
 /* css for custom nav */
 
