@@ -45,7 +45,7 @@ body {
 
 /* Grid style */
 .grid-wrap {
-	max-width: 69em;
+	max-width: 75em;
 	margin: 0 auto;
 	padding: 0 1em 1.875em;
 }
@@ -171,7 +171,6 @@ body {
 	font-size: 200%;
 }
 
-/* Navigation */
 .slideshow nav span {
 	position: fixed;
 	z-index: 1000;
@@ -225,7 +224,6 @@ span.nav-close:before {
 	content: "\e602";
 }
 
-/* Info on arrow key navigation */
 .info-keys {
 	position: fixed;
 	top: 10px;
