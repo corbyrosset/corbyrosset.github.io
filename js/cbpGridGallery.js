@@ -89,16 +89,16 @@
 		var self = this;
 
 		// open the slideshow when clicking on the main grid items
-		this.gridItems.forEach( function( item, idx ) {
-			item.addEventListener( 'click', function() {
-				self._openSlideshow( idx );
-			} );
-		} );
+//		this.gridItems.forEach( function( item, idx ) {
+//			item.addEventListener( 'click', function() {
+//				self._openSlideshow( idx );
+//			} );
+//		} );
 
 		// slideshow controls
-		this.ctrlPrev.addEventListener( 'click', function() { self._navigate( 'prev' ); } );
-		this.ctrlNext.addEventListener( 'click', function() { self._navigate( 'next' ); } );
-		this.ctrlClose.addEventListener( 'click', function() { self._closeSlideshow(); } );
+//		this.ctrlPrev.addEventListener( 'click', function() { self._navigate( 'prev' ); } );
+//		this.ctrlNext.addEventListener( 'click', function() { self._navigate( 'next' ); } );
+//		this.ctrlClose.addEventListener( 'click', function() { self._closeSlideshow(); } );
 
 		// window resize
 		window.addEventListener( 'resize', function() { self._resizeHandler(); } );
@@ -123,44 +123,44 @@
 		} );
 
 		// trick to prevent scrolling when slideshow is visible
-		window.addEventListener( 'scroll', function() {
-			if ( self.isSlideshowVisible ) {
-				window.scrollTo( self.scrollPosition ? self.scrollPosition.x : 0, self.scrollPosition ? self.scrollPosition.y : 0 );
-			}
-			else {
-				self.scrollPosition = { x : window.pageXOffset || docElem.scrollLeft, y : window.pageYOffset || docElem.scrollTop };
-			}
-		});
+//		window.addEventListener( 'scroll', function() {
+//			if ( self.isSlideshowVisible ) {
+//				window.scrollTo( self.scrollPosition ? self.scrollPosition.x : 0, self.scrollPosition ? self.scrollPosition.y : 0 );
+//			}
+//			else {
+//				self.scrollPosition = { x : window.pageXOffset || docElem.scrollLeft, y : window.pageYOffset || docElem.scrollTop };
+//			}
+//		});
 	};
 
-	CBPGridGallery.prototype._openSlideshow = function( pos ) {
-		this.isSlideshowVisible = true;
-		this.current = pos;
-
-		classie.addClass( this.el, 'slideshow-open' );
-
-		/* position slideshow items */
-
-		// set viewport items (current, next and previous)
-		this._setViewportItems();
-		
-		// add class "current" and "show" to currentItem
-		classie.addClass( this.currentItem, 'current' );
-		classie.addClass( this.currentItem, 'show' );
-
-		// add class show to next and previous items
-		// position previous item on the left side and the next item on the right side
-		if( this.prevItem ) {
-			classie.addClass( this.prevItem, 'show' );
-			var translateVal = Number( -1 * ( getViewportW() / 2 + this.prevItem.offsetWidth / 2 ) );
-			setTransform( this.prevItem, support.support3d ? 'translate3d(' + translateVal + 'px, 0, -150px)' : 'translate(' + translateVal + 'px)' );
-		}
-		if( this.nextItem ) {
-			classie.addClass( this.nextItem, 'show' );
-			var translateVal = Number( getViewportW() / 2 + this.nextItem.offsetWidth / 2 );
-			setTransform( this.nextItem, support.support3d ? 'translate3d(' + translateVal + 'px, 0, -150px)' : 'translate(' + translateVal + 'px)' );
-		}
-	};
+//	CBPGridGallery.prototype._openSlideshow = function( pos ) {
+//		this.isSlideshowVisible = true;
+//		this.current = pos;
+//
+//		classie.addClass( this.el, 'slideshow-open' );
+//
+//		/* position slideshow items */
+//
+//		// set viewport items (current, next and previous)
+//		this._setViewportItems();
+//		
+//		// add class "current" and "show" to currentItem
+//		classie.addClass( this.currentItem, 'current' );
+//		classie.addClass( this.currentItem, 'show' );
+//
+//		// add class show to next and previous items
+//		// position previous item on the left side and the next item on the right side
+//		if( this.prevItem ) {
+//			classie.addClass( this.prevItem, 'show' );
+//			var translateVal = Number( -1 * ( getViewportW() / 2 + this.prevItem.offsetWidth / 2 ) );
+//			setTransform( this.prevItem, support.support3d ? 'translate3d(' + translateVal + 'px, 0, -150px)' : 'translate(' + translateVal + 'px)' );
+//		}
+//		if( this.nextItem ) {
+//			classie.addClass( this.nextItem, 'show' );
+//			var translateVal = Number( getViewportW() / 2 + this.nextItem.offsetWidth / 2 );
+//			setTransform( this.nextItem, support.support3d ? 'translate3d(' + translateVal + 'px, 0, -150px)' : 'translate(' + translateVal + 'px)' );
+//		}
+//	};
 
 	CBPGridGallery.prototype._navigate = function( dir ) {
 		if( this.isAnimating ) return;
@@ -268,42 +268,42 @@
 		setTimeout( slide, 25 );
 	}
 
-	CBPGridGallery.prototype._closeSlideshow = function( pos ) {
-		// remove class slideshow-open from the grid gallery elem
-		classie.removeClass( this.el, 'slideshow-open' );
-		// remove class animatable from the slideshow grid
-		classie.removeClass( this.slideshow, 'animatable' );
-
-		var self = this,
-			onEndTransitionFn = function( ev ) {
-				if( support.transitions ) {
-					if( ev.target.tagName.toLowerCase() !== 'ul' ) return;
-					this.removeEventListener( transEndEventName, onEndTransitionFn );
-				}
-				// remove classes show and current from the slideshow items
-				classie.removeClass( self.currentItem, 'current' );
-				classie.removeClass( self.currentItem, 'show' );
-				
-				if( self.prevItem ) {
-					classie.removeClass( self.prevItem, 'show' );
-				}
-				if( self.nextItem ) {
-					classie.removeClass( self.nextItem, 'show' );
-				}
-
-				// also reset any transforms for all the items
-				self.slideshowItems.forEach( function( item ) { setTransform( item, '' ); } );
-
-				self.isSlideshowVisible = false;
-			};
-
-		if( support.transitions ) {
-			this.el.addEventListener( transEndEventName, onEndTransitionFn );
-		}
-		else {
-			onEndTransitionFn();
-		}
-	};
+//	CBPGridGallery.prototype._closeSlideshow = function( pos ) {
+//		// remove class slideshow-open from the grid gallery elem
+//		classie.removeClass( this.el, 'slideshow-open' );
+//		// remove class animatable from the slideshow grid
+//		classie.removeClass( this.slideshow, 'animatable' );
+//
+//		var self = this,
+//			onEndTransitionFn = function( ev ) {
+//				if( support.transitions ) {
+//					if( ev.target.tagName.toLowerCase() !== 'ul' ) return;
+//					this.removeEventListener( transEndEventName, onEndTransitionFn );
+//				}
+//				// remove classes show and current from the slideshow items
+//				classie.removeClass( self.currentItem, 'current' );
+//				classie.removeClass( self.currentItem, 'show' );
+//				
+//				if( self.prevItem ) {
+//					classie.removeClass( self.prevItem, 'show' );
+//				}
+//				if( self.nextItem ) {
+//					classie.removeClass( self.nextItem, 'show' );
+//				}
+//
+//				// also reset any transforms for all the items
+//				self.slideshowItems.forEach( function( item ) { setTransform( item, '' ); } );
+//
+//				self.isSlideshowVisible = false;
+//			};
+//
+//		if( support.transitions ) {
+//			this.el.addEventListener( transEndEventName, onEndTransitionFn );
+//		}
+//		else {
+//			onEndTransitionFn();
+//		}
+//	};
 
 	CBPGridGallery.prototype._setViewportItems = function() {
 		this.currentItem = null;
