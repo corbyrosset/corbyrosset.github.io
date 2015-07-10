@@ -162,111 +162,111 @@
 //		}
 //	};
 
-	CBPGridGallery.prototype._navigate = function( dir ) {
-		if( this.isAnimating ) return;
-		if( dir === 'next' && this.current === this.itemsCount - 1 ||  dir === 'prev' && this.current === 0  ) {
-			this._closeSlideshow();
-			return;
-		}
-
-		this.isAnimating = true;
-		
-		// reset viewport items
-		this._setViewportItems();
-
-		var self = this,
-			itemWidth = this.currentItem.offsetWidth,
-			// positions for the centered/current item, both the side items and the incoming ones
-			transformLeftStr = support.support3d ? 'translate3d(-' + Number( getViewportW() / 2 + itemWidth / 2 ) + 'px, 0, -150px)' : 'translate(-' + Number( getViewportW() / 2 + itemWidth / 2 ) + 'px)',
-			transformRightStr = support.support3d ? 'translate3d(' + Number( getViewportW() / 2 + itemWidth / 2 ) + 'px, 0, -150px)' : 'translate(' + Number( getViewportW() / 2 + itemWidth / 2 ) + 'px)',
-			transformCenterStr = '', transformOutStr, transformIncomingStr,
-			// incoming item
-			incomingItem;
-
-		if( dir === 'next' ) {
-			transformOutStr = support.support3d ? 'translate3d( -' + Number( (getViewportW() * 2) / 2 + itemWidth / 2 ) + 'px, 0, -150px )' : 'translate(-' + Number( (getViewportW() * 2) / 2 + itemWidth / 2 ) + 'px)';
-			transformIncomingStr = support.support3d ? 'translate3d( ' + Number( (getViewportW() * 2) / 2 + itemWidth / 2 ) + 'px, 0, -150px )' : 'translate(' + Number( (getViewportW() * 2) / 2 + itemWidth / 2 ) + 'px)';
-		}
-		else {
-			transformOutStr = support.support3d ? 'translate3d( ' + Number( (getViewportW() * 2) / 2 + itemWidth / 2 ) + 'px, 0, -150px )' : 'translate(' + Number( (getViewportW() * 2) / 2 + itemWidth / 2 ) + 'px)';
-			transformIncomingStr = support.support3d ? 'translate3d( -' + Number( (getViewportW() * 2) / 2 + itemWidth / 2 ) + 'px, 0, -150px )' : 'translate(-' + Number( (getViewportW() * 2) / 2 + itemWidth / 2 ) + 'px)';
-		}
-
-		// remove class animatable from the slideshow grid (if it has already)
-		classie.removeClass( self.slideshow, 'animatable' );
-
-		if( dir === 'next' && this.current < this.itemsCount - 2 || dir === 'prev' && this.current > 1 ) {
-			// we have an incoming item!
-			incomingItem = this.slideshowItems[ dir === 'next' ? this.current + 2 : this.current - 2 ];
-			setTransform( incomingItem, transformIncomingStr );
-			classie.addClass( incomingItem, 'show' );
-		}
-
-		var slide = function() {
-			// add class animatable to the slideshow grid
-			classie.addClass( self.slideshow, 'animatable' );
-
-			// overlays:
-			classie.removeClass( self.currentItem, 'current' );
-			var nextCurrent = dir === 'next' ? self.nextItem : self.prevItem;
-			classie.addClass( nextCurrent, 'current' );
-
-			setTransform( self.currentItem, dir === 'next' ? transformLeftStr : transformRightStr );
-
-			if( self.nextItem ) {
-				setTransform( self.nextItem, dir === 'next' ? transformCenterStr : transformOutStr );
-			}
-
-			if( self.prevItem ) {
-				setTransform( self.prevItem, dir === 'next' ? transformOutStr : transformCenterStr );
-			}
-
-			if( incomingItem ) {
-				setTransform( incomingItem, dir === 'next' ? transformRightStr : transformLeftStr );
-			}
-
-			var onEndTransitionFn = function( ev ) {
-				if( support.transitions ) {
-					if( ev.propertyName.indexOf( 'transform' ) === -1 ) return false;
-					this.removeEventListener( transEndEventName, onEndTransitionFn );
-				}
-
-				if( self.prevItem && dir === 'next' ) {
-					classie.removeClass( self.prevItem, 'show' );
-				}
-				else if( self.nextItem && dir === 'prev' ) {
-					classie.removeClass( self.nextItem, 'show' );
-				}
-
-				if( dir === 'next' ) {
-					self.prevItem = self.currentItem;
-					self.currentItem = self.nextItem;
-					if( incomingItem ) {
-						self.nextItem = incomingItem;
-					}
-				}
-				else {
-					self.nextItem = self.currentItem;
-					self.currentItem = self.prevItem;
-					if( incomingItem ) {
-						self.prevItem = incomingItem;
-					}
-				}
-
-				self.current = dir === 'next' ? self.current + 1 : self.current - 1;
-				self.isAnimating = false;
-			};
-
-			if( support.transitions ) {
-				self.currentItem.addEventListener( transEndEventName, onEndTransitionFn );
-			}
-			else {
-				onEndTransitionFn();
-			}
-		};
-
-		setTimeout( slide, 25 );
-	}
+//	CBPGridGallery.prototype._navigate = function( dir ) {
+//		if( this.isAnimating ) return;
+//		if( dir === 'next' && this.current === this.itemsCount - 1 ||  dir === 'prev' && this.current === 0  ) {
+//			this._closeSlideshow();
+//			return;
+//		}
+//
+//		this.isAnimating = true;
+//		
+//		// reset viewport items
+//		this._setViewportItems();
+//
+//		var self = this,
+//			itemWidth = this.currentItem.offsetWidth,
+//			// positions for the centered/current item, both the side items and the incoming ones
+//			transformLeftStr = support.support3d ? 'translate3d(-' + Number( getViewportW() / 2 + itemWidth / 2 ) + 'px, 0, -150px)' : 'translate(-' + Number( getViewportW() / 2 + itemWidth / 2 ) + 'px)',
+//			transformRightStr = support.support3d ? 'translate3d(' + Number( getViewportW() / 2 + itemWidth / 2 ) + 'px, 0, -150px)' : 'translate(' + Number( getViewportW() / 2 + itemWidth / 2 ) + 'px)',
+//			transformCenterStr = '', transformOutStr, transformIncomingStr,
+//			// incoming item
+//			incomingItem;
+//
+//		if( dir === 'next' ) {
+//			transformOutStr = support.support3d ? 'translate3d( -' + Number( (getViewportW() * 2) / 2 + itemWidth / 2 ) + 'px, 0, -150px )' : 'translate(-' + Number( (getViewportW() * 2) / 2 + itemWidth / 2 ) + 'px)';
+//			transformIncomingStr = support.support3d ? 'translate3d( ' + Number( (getViewportW() * 2) / 2 + itemWidth / 2 ) + 'px, 0, -150px )' : 'translate(' + Number( (getViewportW() * 2) / 2 + itemWidth / 2 ) + 'px)';
+//		}
+//		else {
+//			transformOutStr = support.support3d ? 'translate3d( ' + Number( (getViewportW() * 2) / 2 + itemWidth / 2 ) + 'px, 0, -150px )' : 'translate(' + Number( (getViewportW() * 2) / 2 + itemWidth / 2 ) + 'px)';
+//			transformIncomingStr = support.support3d ? 'translate3d( -' + Number( (getViewportW() * 2) / 2 + itemWidth / 2 ) + 'px, 0, -150px )' : 'translate(-' + Number( (getViewportW() * 2) / 2 + itemWidth / 2 ) + 'px)';
+//		}
+//
+//		// remove class animatable from the slideshow grid (if it has already)
+//		classie.removeClass( self.slideshow, 'animatable' );
+//
+//		if( dir === 'next' && this.current < this.itemsCount - 2 || dir === 'prev' && this.current > 1 ) {
+//			// we have an incoming item!
+//			incomingItem = this.slideshowItems[ dir === 'next' ? this.current + 2 : this.current - 2 ];
+//			setTransform( incomingItem, transformIncomingStr );
+//			classie.addClass( incomingItem, 'show' );
+//		}
+//
+//		var slide = function() {
+//			// add class animatable to the slideshow grid
+//			classie.addClass( self.slideshow, 'animatable' );
+//
+//			// overlays:
+//			classie.removeClass( self.currentItem, 'current' );
+//			var nextCurrent = dir === 'next' ? self.nextItem : self.prevItem;
+//			classie.addClass( nextCurrent, 'current' );
+//
+//			setTransform( self.currentItem, dir === 'next' ? transformLeftStr : transformRightStr );
+//
+//			if( self.nextItem ) {
+//				setTransform( self.nextItem, dir === 'next' ? transformCenterStr : transformOutStr );
+//			}
+//
+//			if( self.prevItem ) {
+//				setTransform( self.prevItem, dir === 'next' ? transformOutStr : transformCenterStr );
+//			}
+//
+//			if( incomingItem ) {
+//				setTransform( incomingItem, dir === 'next' ? transformRightStr : transformLeftStr );
+//			}
+//
+//			var onEndTransitionFn = function( ev ) {
+//				if( support.transitions ) {
+//					if( ev.propertyName.indexOf( 'transform' ) === -1 ) return false;
+//					this.removeEventListener( transEndEventName, onEndTransitionFn );
+//				}
+//
+//				if( self.prevItem && dir === 'next' ) {
+//					classie.removeClass( self.prevItem, 'show' );
+//				}
+//				else if( self.nextItem && dir === 'prev' ) {
+//					classie.removeClass( self.nextItem, 'show' );
+//				}
+//
+//				if( dir === 'next' ) {
+//					self.prevItem = self.currentItem;
+//					self.currentItem = self.nextItem;
+//					if( incomingItem ) {
+//						self.nextItem = incomingItem;
+//					}
+//				}
+//				else {
+//					self.nextItem = self.currentItem;
+//					self.currentItem = self.prevItem;
+//					if( incomingItem ) {
+//						self.prevItem = incomingItem;
+//					}
+//				}
+//
+//				self.current = dir === 'next' ? self.current + 1 : self.current - 1;
+//				self.isAnimating = false;
+//			};
+//
+//			if( support.transitions ) {
+//				self.currentItem.addEventListener( transEndEventName, onEndTransitionFn );
+//			}
+//			else {
+//				onEndTransitionFn();
+//			}
+//		};
+//
+//		setTimeout( slide, 25 );
+//	}
 
 //	CBPGridGallery.prototype._closeSlideshow = function( pos ) {
 //		// remove class slideshow-open from the grid gallery elem
@@ -305,19 +305,19 @@
 //		}
 //	};
 
-	CBPGridGallery.prototype._setViewportItems = function() {
-		this.currentItem = null;
-		this.prevItem = null;
-		this.nextItem = null;
-
-		if( this.current > 0 ) {
-			this.prevItem = this.slideshowItems[ this.current - 1 ];
-		}
-		if( this.current < this.itemsCount - 1 ) {
-			this.nextItem = this.slideshowItems[ this.current + 1 ];
-		}
-		this.currentItem = this.slideshowItems[ this.current ];
-	}
+//	CBPGridGallery.prototype._setViewportItems = function() {
+//		this.currentItem = null;
+//		this.prevItem = null;
+//		this.nextItem = null;
+//
+//		if( this.current > 0 ) {
+//			this.prevItem = this.slideshowItems[ this.current - 1 ];
+//		}
+//		if( this.current < this.itemsCount - 1 ) {
+//			this.nextItem = this.slideshowItems[ this.current + 1 ];
+//		}
+//		this.currentItem = this.slideshowItems[ this.current ];
+//	}
 
 	// taken from https://github.com/desandro/vanilla-masonry/blob/master/masonry.js by David DeSandro
 	// original debounce by John Hann
