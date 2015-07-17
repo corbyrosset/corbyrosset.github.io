@@ -414,8 +414,9 @@ Main content
     font-size: 1.3em;
   }
   .centered {
-      width:95%;
-      padding:0 2.5%;
+      width:90%;
+      padding:0 5%;
+      top:230px;
   }
 /*
   .cbp-af-header.cbp-af-header-shrink nav a {
