@@ -84,15 +84,9 @@ p.title {
   overflow: hidden;
   padding:0 20%;
   top:300px;
-/*
-  left: 100px;
-  right: 100px;
-*/
   height:400px;
   width:80%;
   margin:auto;
-/*  padding: 10%;*/
-/*  width:500px;*/
   z-index: 999;
   word-wrap: break-word;
 }
@@ -418,10 +412,5 @@ Main content
       padding:0 5%;
       top:200px;
   }
-/*
-  .cbp-af-header.cbp-af-header-shrink nav a {
-		line-height: 2;
-  }
-*/
   
 }
