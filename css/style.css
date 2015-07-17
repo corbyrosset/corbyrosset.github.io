@@ -94,6 +94,7 @@ p.title {
   height:400px;
   width:80%;
   z-index: 999;
+  word-wrap: break-word;
 }
 #picture {
   width: 200px;
