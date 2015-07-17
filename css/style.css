@@ -92,7 +92,8 @@ p.title {
   left: 100px;
   right: 100px;
   height:400px;
-  width:80%;
+/*  width:80%;*/
+  width:500px;
   z-index: 999;
   word-wrap: break-word;
 }
