@@ -130,12 +130,12 @@
 	.cbp-af-header nav a,
 	.cbp-af-header.cbp-af-header-shrink nav a {
 		line-height: 1;
-        font-size: 0.8em;
+        font-size: 1em;
 	}
     .cbp-af-header.cbp-af-header-shrink h1 {
 		font-size: 0.8em;
 	}
     .cbp-af-inner h1 {
-		font-size: 1em;
+		font-size: 2em;
   }
 }

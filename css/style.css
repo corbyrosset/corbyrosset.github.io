@@ -418,9 +418,12 @@ Main content
 
 @media only screen and (max-width: 480px) {
   p.title {
-    font-size: 0.7em;
+    font-size: 1.3em;
   }
-  .cbp-af-header.cbp-af-header-shrink h1 {
-		font-size: 0.7em;
-	}
+/*
+  .cbp-af-header.cbp-af-header-shrink nav a {
+		line-height: 2;
+  }
+*/
+  
 }
