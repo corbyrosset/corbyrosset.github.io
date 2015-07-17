@@ -72,7 +72,7 @@ header p {
 p.title {
 /*    margin: 0;*/
 /*	padding: 1em 0;*/
-	font-size: 1.8em;
+	font-size: 1.5em;
 	line-height: 1.5;
     
     font-family: "Vollkorn", serif;
@@ -145,6 +145,7 @@ li.logos {
   height: 100%;
     z-index: 1000;
 }
+
 
 
 
@@ -412,5 +413,14 @@ Main content
 	.cbp-af-header nav a,
 	.cbp-af-header.cbp-af-header-shrink nav a {
 		line-height: 1;
+	}
+}
+
+@media only screen and (max-width: 480px) {
+  p.title {
+    font-size: 0.7em;
+  }
+  .cbp-af-header.cbp-af-header-shrink h1 {
+		font-size: 0.7em;
 	}
 }
