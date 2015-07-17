@@ -409,7 +409,7 @@ Main content
 	}
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 568px) {
   p.title {
     font-size: 1.3em;
   }
