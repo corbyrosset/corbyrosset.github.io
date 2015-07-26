@@ -3004,8 +3004,9 @@ select[multiple].form-group-lg .form-control {
       -ms-user-select: none;
           user-select: none;
   background-image: none;
-  border: 1px solid transparent;
-  border-radius: 4px;
+  -moz-border-radius: 0px;
+  -webkit-border-radius: 0px;
+  border-radius: 0px;
 }
 .btn:focus,
 .btn:active:focus,
@@ -3086,10 +3087,11 @@ fieldset[disabled] .btn-default.active {
   background-color: #333;
 }
 .btn-primary {
-  color: #fff;
-  background-color: #337ab7;
-  border-color: #2e6da4;
+  color: #201A51;
+  background-color: #f6f6f6;
+  border-color: #f6f6f6;
 }
+/*
 .btn-primary:hover,
 .btn-primary:focus,
 .btn-primary.focus,
@@ -3100,6 +3102,7 @@ fieldset[disabled] .btn-default.active {
   background-color: #286090;
   border-color: #204d74;
 }
+*/
 .btn-primary:active,
 .btn-primary.active,
 .open > .dropdown-toggle.btn-primary {
