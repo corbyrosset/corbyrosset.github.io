@@ -74,9 +74,9 @@ p.title {
 .centered {
   position:absolute;
    width:80%;
-   height:40%;
+   height:300px;
    z-index:15;
-   top:80%;
+   top:500px;
    left:20%;
    margin:-20% 10% 0 -10%;
    word-wrap: break-word;
