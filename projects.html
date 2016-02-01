@@ -75,24 +75,6 @@
 
         <hr>
 
-        <!-- Project Two -->
-        <div class="row">
-            <div class="col-md-5">
-                <a href="">
-                    <img class="img-responsive" src="images/large/reinforcement.png" alt="">
-                </a>
-            </div>
-            <div class="col-md-6">
-                <h3>Reinforcement Learning: A Comparison of Value Iteration and Q-learning Algorithms in a Markov Decision Process</h3>
-                <p>Abstract: In this paper we apply two different reinforcement learning algorithms to a Markov Decision Process (MDP). The first is value iteration (VI) with full knowledge of the environment’s stochastic state transition model, the second is Q-learning (Q), which does not require the model. We found that VI converges to a near-optimal solution more quickly, but given the right input functions and parameters, Q yields slightly better performance, especially when the reward function is particularly harsh. Both agents exploited interesting “loopholes” in the environment to achieve better scores. We recommend using VI to solve an MDP whenever enough information exists...</p>
-                
-            </div>
-            <a class="btn btn-primary hvr-sweep-to-left" href="files/reinforcement.pdf">Read the Paper</a>
-            <a class="btn btn-primary hvr-sweep-to-left" href="https://github.com/corbyrosset/Algorithms/tree/master/ReinforcementLearning">Get the Code</a>
-        </div>
-
-        <hr>
-
         <div class="row">
             <div class="col-md-5">
                 <a href="#">
@@ -111,21 +93,24 @@
 
         <hr>
 
-        <!-- Project Two -->
         <div class="row">
             <div class="col-md-5">
-                <a href="">
-                    <img class="img-responsive" src="images/large/decisoin.png" alt="">
+                <a href="#">
+                    <img class="img-responsive" src="images/large/ldapca.png" alt="">
                 </a>
             </div>
             <div class="col-md-6">
-                <h3>Decision Trees: A Comparison of Genetic and Information-Theoretic Classification Trees</h3>
-                <h4>A paper describing my first interaction with, and comparison of, some of the canonical decision tree learning algorithms on UCI data sets.</h4>
-                <p></p>
+                <h3>Linear Discriminant Analysis</h3>
+                <h4>Comparison of LDA and PCA for Subspace Learning in Classification Settings</h4>
+                <p>PCA and LDA learn linear subspaces but with different objectives; my goal here was to develop an intuition about when it was suitable to use these algorithms for dimensinality reduction, if at all. PCA attempts to find a subspace that captures maximal variance and reconstructive ability. LDA takes into account class labels and seeks a maximally discriminative subspace of the data. However, both have their weaknesses. PCA is unable to discern between two classes if they both lie along approximately parallel principle components. LDA, on the other hand, is only able to discern between classes that exhibit large mean separation and captures none of the variance within the classes. </p>
+
+                <p> I also wanted to check out ipython notebooks, and they're really fun!</p>
             </div>
-            <a class="btn btn-primary hvr-sweep-to-left" href="files/decision.pdf">Read the Paper</a>
-            <a class="btn btn-primary hvr-sweep-to-left" href="https://github.com/corbyrosset/Algorithms/tree/master/ClassicalDecisionTrees">Get the Code</a>
+
+            <a class="btn btn-primary hvr-sweep-to-left" href="files/datareduction.pdf">Read Introduction</a>
+            <a class="btn btn-primary hvr-sweep-to-left" href="http://nbviewer.jupyter.org/github/corbyrosset/Algorithms/blob/master/LDA_PCA/LDA_vs_PCA.ipynb">Get the Code</a>
         </div>
+        <!-- /.row -->
 
         <hr>
 
@@ -143,6 +128,43 @@
             <a class="btn btn-primary hvr-sweep-to-left" href="files/OnlineDecisionTreeReview.pdf">Read the Paper</a>
         </div>
         <!-- /.row -->
+
+        <hr>
+
+        <!-- Project Two -->
+        <div class="row">
+            <div class="col-md-5">
+                <a href="">
+                    <img class="img-responsive" src="images/large/reinforcement.png" alt="">
+                </a>
+            </div>
+            <div class="col-md-6">
+                <h3>Reinforcement Learning: A Comparison of Value Iteration and Q-learning Algorithms in a Markov Decision Process</h3>
+                <p>Abstract: In this paper we apply two different reinforcement learning algorithms to a Markov Decision Process (MDP). The first is value iteration (VI) with full knowledge of the environment’s stochastic state transition model, the second is Q-learning (Q), which does not require the model. We found that VI converges to a near-optimal solution more quickly, but given the right input functions and parameters, Q yields slightly better performance, especially when the reward function is particularly harsh. Both agents exploited interesting “loopholes” in the environment to achieve better scores. We recommend using VI to solve an MDP whenever enough information exists...</p>
+                
+            </div>
+            <a class="btn btn-primary hvr-sweep-to-left" href="files/reinforcement.pdf">Read the Paper</a>
+            <a class="btn btn-primary hvr-sweep-to-left" href="https://github.com/corbyrosset/Algorithms/tree/master/ReinforcementLearning">Get the Code</a>
+        </div>
+
+        <hr>
+
+        <!-- Project Two -->
+        <div class="row">
+            <div class="col-md-5">
+                <a href="">
+                    <img class="img-responsive" src="images/large/decisoin.png" alt="">
+                </a>
+            </div>
+            <div class="col-md-6">
+                <h3>Decision Trees: A Comparison of Genetic and Information-Theoretic Classification Trees</h3>
+                <h4>A paper describing my first interaction with, and comparison of, some of the canonical decision tree learning algorithms on UCI data sets.</h4>
+                <p>In this paper I compare the performance of decision trees constructed by two different machine learning algorithms on binary classification problems. The first is an information-theoretic algorithm that selects for attributes which most aggressively reduce entropy in the training set. The second is a genetic algorithm that borrows the concept of natural selection to build populations of decision trees probabilistically. I show that while the performance of the algorithms is similar, the underlying flexibility of the genetic algorithm allows for broader coverage of the solution space in hope of finding a good local maximum, but at the cost of tuning its numerous parameters to that solution space.
+</p>
+            </div>
+            <a class="btn btn-primary hvr-sweep-to-left" href="files/decision.pdf">Read the Paper</a>
+            <a class="btn btn-primary hvr-sweep-to-left" href="https://github.com/corbyrosset/Algorithms/tree/master/ClassicalDecisionTrees">Get the Code</a>
+        </div>
 
         <hr>
 
