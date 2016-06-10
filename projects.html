@@ -42,6 +42,23 @@
         </div>
         <!-- /.row -->
 
+        <div class="row">
+            <div class="col-md-5">
+                <a href="">
+                    <img class="img-responsive" src="images/large/crf.png" alt="">
+                </a>
+            </div>
+            <div class="col-md-6">
+                <h3>Multiview Linear Chain Conditional Random Fields</h3>
+                <p> CRFs are graphical models that encode a conditional probaibility distribution, which holds several advantages over joint distributions (HMMs), namely, the ability to more quickly compute the normalizing constant. Many common time series tasks such as phone recognition use the viterbi algorithm to find the best sequence of labels. Here we modify the famous conditional random field algorithm to incorporate multiple views of the data, which has been shown to dramatically constrain the complexity of learning. This is a presentation, along with soon-to-be published code, describing the algorithm and comparing it to HMMs.  
+                </p>
+                
+            </div>
+            <a class="btn btn-primary hvr-sweep-to-left" href="files/D2m_presentation.pdf">Presentation</a>
+        </div>
+
+        <hr>
+
         <!-- Project One -->
         <div class="row">
             <div class="col-md-5">
@@ -50,7 +67,7 @@
                 </a>
             </div>
             <div class="col-md-6">
-                <h3>A Compairison of Deep Methods for Canonical Correlation Analysis on Phoneme Recognition</h3>
+                <h3>A Comparison of Deep Methods for Canonical Correlation Analysis on Phoneme Recognition</h3>
                 <p> 
                     The primary advantage of multiview learning in the realm of classification is the ability to incorporate multiple modalities of the same phenomenon for learning. For example, today's social media world allows for photos, text, locations, friend tagging, and audio recordings to be part of a single "post". A classifier can be trained for each modality, and in the case of subspace learning, the correlation objective can be applied to all classifiers simultaneously to yield better performance than a classifier trained in isolation. Canonical Correlation Analysis lends itself well to situations wherein one modality of the data should be predicted or reconstructed from the other modalities. Such is the case for phoneme recognition in speech processing. This project explores a range of nonlinear classifiers for recognizing phonemes in the XRMB dataset. Since it was just released (at the time of writing), Tensorflow was used to implement the deep techniques. 
                 </p>
