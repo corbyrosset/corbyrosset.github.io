@@ -44,6 +44,30 @@
         <div class="row">
             <div class="col-md-5">
                 <a href="">
+                    <img class="img-responsive" src="images/large/flappy.png" alt="">
+                </a>
+            </div>
+            <div class="col-md-6">
+                <h3>Multi-Agent Reinforcement Learning for Flappy Bird</h3>
+                <p> Some experiments with Deep Q-learning for a Pygame implementation of Flappy Bird. We specfically wanted to see whether Deep-Q learning could be extended to multi-agent settings while still retaining the benefits of learning from raw sensory input. Each agent has its own action-value approximation function with no shared parameters; the code scales nicely to allow for arbitrary agents. </p>
+
+                <p>
+                <a class="btn btn-primary hvr-sweep-to-left" href="files/cooperative-multi-agent.pdf">Paper</a>
+                <a class="btn btn-primary hvr-sweep-to-left" href="https://github.com/iankm/FlappyDQL-MultiAgent">Code</a>
+                <a class="btn btn-primary hvr-sweep-to-left" href="https://www.youtube.com/watch?v=y9ZQDuxpK44">Video</a>
+                </p>
+                
+            </div>
+            
+
+            
+        </div>
+
+        <hr>
+
+        <div class="row">
+            <div class="col-md-5">
+                <a href="">
                     <img class="img-responsive" src="images/large/BaBi.png" alt="">
                 </a>
             </div>
@@ -51,9 +75,11 @@
                 <h3>Deep Recurrent Neural Networks for Question Answering</h3>
                 <p> A summary of deep learning algorithms for question answering for this year's thesis project, mostly focusing on Weston et al's Memory Neural Networks and their variants, such as the Neural Reasoner, that are applied to Facebook's BabI dataset. The QA task here is not factoid question answering, which is traditionally an information extraction task, but answering questions that require inference over facts that are local to a given scenario (i.e. there is no knowledge base on the internet containing the relevant data, you only have the facts that you are told). This is a challenging new frontier that requires understanding the relationships between entities that may change over time, and then doing inference over accumulated knowledge. These tasks bring the NLP community one step closer to interactive and predictive dialogue systems. 
                 </p>
-                
+
+                <p>
+                <a class="btn btn-primary hvr-sweep-to-left" href="files/QA_MemNN_Overview_releasable.pdf">Report</a>
+                </p> 
             </div>
-            <a class="btn btn-primary hvr-sweep-to-left" href="files/QA_MemNN_Overview_releasable.pdf">Report</a>
         </div>
 
         <hr>
@@ -68,9 +94,12 @@
                 <h3>Multiview Linear Chain Conditional Random Fields</h3>
                 <p> CRFs are graphical models that encode a conditional probaibility distribution, which holds several advantages over joint distributions (HMMs), namely, the ability to more quickly compute the normalizing constant. Many common time series tasks such as phone recognition use the viterbi algorithm to find the best sequence of labels. Here we modify the famous conditional random field algorithm to incorporate multiple views of the data, which has been shown to dramatically constrain the complexity of learning. This is a presentation, along with soon-to-be published code, describing the algorithm and comparing it to HMMs.  
                 </p>
+
+                <p>
+                <a class="btn btn-primary hvr-sweep-to-left" href="files/D2m_presentation.pdf">Presentation</a>
+                </p>
                 
             </div>
-            <a class="btn btn-primary hvr-sweep-to-left" href="files/D2m_presentation.pdf">Presentation</a>
         </div>
 
         <hr>
@@ -87,10 +116,13 @@
                 <p> 
                     The primary advantage of multiview learning in the realm of classification is the ability to incorporate multiple modalities of the same phenomenon for learning. For example, today's social media world allows for photos, text, locations, friend tagging, and audio recordings to be part of a single "post". A classifier can be trained for each modality, and in the case of subspace learning, the correlation objective can be applied to all classifiers simultaneously to yield better performance than a classifier trained in isolation. Canonical Correlation Analysis lends itself well to situations wherein one modality of the data should be predicted or reconstructed from the other modalities. Such is the case for phoneme recognition in speech processing. This project explores a range of nonlinear classifiers for recognizing phonemes in the XRMB dataset. Since it was just released (at the time of writing), Tensorflow was used to implement the deep techniques. 
                 </p>
+
+                <p>
+                <a class="btn btn-primary hvr-sweep-to-left" href="files/DCCA.pdf">Read the Paper</a>
+                <a class="btn btn-primary hvr-sweep-to-left" href="https://github.com/corbyrosset/Correlation-Analysis-and-Friends">Get the Code</a>
+                </p>
                 
             </div>
-            <a class="btn btn-primary hvr-sweep-to-left" href="files/DCCA.pdf">Read the Paper</a>
-            <a class="btn btn-primary hvr-sweep-to-left" href="https://github.com/corbyrosset/Correlation-Analysis-and-Friends">Get the Code</a>
         </div>
 
         <hr>
@@ -105,10 +137,13 @@
                 <h3>Stochastic and Incremental algorithms for Linear Subspace Learning for Facial Identification</h3>
                 <p> Often times data sets are too large or high dimensional to be sensible. Perhaps the data contains redundant, unnecessary, or uninformative features. For example, out of the several million pixels representing a persons face in an image, how many of those are necessary to determine the subject's identity? Subspace learning answers this question by finding a suitably small subspace of the data that retains information needed to reconstruct the original data with minimal loss. This project describes, replicates, and compares the state of the art stochastic and incremental methods to subspace learning and applies them to the well known Yale Face Dataset.
                 </p>
+
+                <p>
+                <a class="btn btn-primary hvr-sweep-to-left" href="files/StochasticSubspaceLearning.pdf">Read the Paper</a>
+                <a class="btn btn-primary hvr-sweep-to-left" href="https://github.com/corbyrosset/Stochastic-and-Incremental-PCA">Get the Code</a>
+                </p>
                 
             </div>
-            <a class="btn btn-primary hvr-sweep-to-left" href="files/StochasticSubspaceLearning.pdf">Read the Paper</a>
-            <a class="btn btn-primary hvr-sweep-to-left" href="https://github.com/corbyrosset/Stochastic-and-Incremental-PCA">Get the Code</a>
         </div>
 
         <hr>
@@ -123,10 +158,13 @@
                 <h3>Parsing</h3>
                 <p> Extracting meaning from raw text is a difficult task. There are many ambiguities in natural and formal text arising from synonymy, polysemy, syntactic, and lexical ambiguities. Consider one of my favorite examples from Dr. Eisner: "Time flies like an arrow". Is this a command to time fruit flies quickly? Or that the abstract notion of time moves quickly? Or that a certain species of insect known as the time fly happen to like a particular arrow? Fortunately, while each of these parses is possible, some are more likely than others in the context of large corpora. Earley's algorithm, implemented here with a few optimizations, is a way to construct the most likely parse tree from a grammar of smaller context-free rules composed by dynamic programming. There are several great resources to learn how this well-studied algorithm works. Photo: http://www.sanjaymeena.net/
                 </p>
+
+                <p>
+                <a class="btn btn-primary hvr-sweep-to-left" href="https://www.cs.jhu.edu/~jason/465/PDFSlides/lect10-earley.pdf">See Explanation</a>
+                <a class="btn btn-primary hvr-sweep-to-left" href="https://github.com/corbyrosset/Algorithms/tree/master/parser">Get the Code</a>
+                </p>
                 
             </div>
-            <a class="btn btn-primary hvr-sweep-to-left" href="https://www.cs.jhu.edu/~jason/465/PDFSlides/lect10-earley.pdf">See Explanation</a>
-            <a class="btn btn-primary hvr-sweep-to-left" href="https://github.com/corbyrosset/Algorithms/tree/master/parser">Get the Code</a>
         </div>
 
         <hr>
@@ -141,9 +179,12 @@
                 <h3>Random Forests</h3>
                 <h4>Classification by Majority Vote of a Forest of Decision Trees</h4>
                 <p>Random Forests are some of the most popular, thoroughly studied, and widely used classifiers. A major contribution came from Leo Breiman's paper discussing variance reduction for classical information-theoretic decision trees by randomized training of a community of classifiers. The solution is basically to take the majority vote from the many trees each trained on a subsample of the data with randomized selection of test attributes. On a related note, I also implemented boosted decision trees for comparison</p>
+
+                <p>
+                <a class="btn btn-primary hvr-sweep-to-left" href="files/RandomForests.pdf">Read the Paper</a>
+                <a class="btn btn-primary hvr-sweep-to-left" href="https://github.com/corbyrosset/Algorithms/tree/master/RandomForests">Get the Code</a>
+                </p>
             </div>
-            <a class="btn btn-primary hvr-sweep-to-left" href="files/RandomForests.pdf">Read the Paper</a>
-            <a class="btn btn-primary hvr-sweep-to-left" href="https://github.com/corbyrosset/Algorithms/tree/master/RandomForests">Get the Code</a>
         </div>
         <!-- /.row -->
 
@@ -161,10 +202,12 @@
                 <p>PCA and LDA learn linear subspaces but with different objectives; my goal here was to develop an intuition about when it was suitable to use these algorithms for dimensinality reduction, if at all. PCA attempts to find a subspace that captures maximal variance and reconstructive ability. LDA takes into account class labels and seeks a maximally discriminative subspace of the data. However, both have their weaknesses. PCA is unable to discern between two classes if they both lie along approximately parallel principle components. LDA, on the other hand, is only able to discern between classes that exhibit large mean separation and captures none of the variance within the classes. </p>
 
                 <p> I also wanted to check out ipython notebooks, and they're really fun!</p>
-            </div>
 
-            <a class="btn btn-primary hvr-sweep-to-left" href="files/datareduction.pdf">Read Introduction</a>
-            <a class="btn btn-primary hvr-sweep-to-left" href="http://nbviewer.jupyter.org/github/corbyrosset/Algorithms/blob/master/LDA_PCA/LDA_vs_PCA.ipynb">Get the Code</a>
+                <p>
+                <a class="btn btn-primary hvr-sweep-to-left" href="files/datareduction.pdf">Read Introduction</a>
+                <a class="btn btn-primary hvr-sweep-to-left" href="http://nbviewer.jupyter.org/github/corbyrosset/Algorithms/blob/master/LDA_PCA/LDA_vs_PCA.ipynb">Get the Code</a>
+                </p>
+            </div>
         </div>
         <!-- /.row -->
 
@@ -180,8 +223,11 @@
                 <h3>Literature Review of Online Decision Tree Classification Algorithms</h3>
                 <h4>Independent Research</h4>
                 <p>This paper summarizes the most impactful literature of online decision tree (ODT) algorithms. These classification algorithms are designed to handle extremely large datasets or data streams with high frequency. Learning decision trees in an online setting is a natural topic for investigation if one is already familiar with the basic batch algorithms. They are also more practical from a business and engineering standpoint, as they are proven to perform asymptotically as well as a batch learner. </p>
+
+                <p>
+                <a class="btn btn-primary hvr-sweep-to-left" href="files/OnlineDecisionTreeReview.pdf">Read the Paper</a>
+                </p>
             </div>
-            <a class="btn btn-primary hvr-sweep-to-left" href="files/OnlineDecisionTreeReview.pdf">Read the Paper</a>
         </div>
         <!-- /.row -->
 
@@ -197,10 +243,13 @@
             <div class="col-md-6">
                 <h3>Reinforcement Learning: A Comparison of Value Iteration and Q-learning Algorithms in a Markov Decision Process</h3>
                 <p>Abstract: In this paper we apply two different reinforcement learning algorithms to a Markov Decision Process (MDP). The first is value iteration (VI) with full knowledge of the environment’s stochastic state transition model, the second is Q-learning (Q), which does not require the model. We found that VI converges to a near-optimal solution more quickly, but given the right input functions and parameters, Q yields slightly better performance, especially when the reward function is particularly harsh. Both agents exploited interesting “loopholes” in the environment to achieve better scores. We recommend using VI to solve an MDP whenever enough information exists...</p>
+
+                <p>
+                <a class="btn btn-primary hvr-sweep-to-left" href="files/reinforcement.pdf">Read the Paper</a>
+                <a class="btn btn-primary hvr-sweep-to-left" href="https://github.com/corbyrosset/Algorithms/tree/master/ReinforcementLearning">Get the Code</a> 
+                </p>
                 
             </div>
-            <a class="btn btn-primary hvr-sweep-to-left" href="files/reinforcement.pdf">Read the Paper</a>
-            <a class="btn btn-primary hvr-sweep-to-left" href="https://github.com/corbyrosset/Algorithms/tree/master/ReinforcementLearning">Get the Code</a>
         </div>
 
         <hr>
@@ -215,11 +264,13 @@
             <div class="col-md-6">
                 <h3>Decision Trees: A Comparison of Genetic and Information-Theoretic Classification Trees</h3>
                 <h4>A paper describing my first interaction with, and comparison of, some of the canonical decision tree learning algorithms on UCI data sets.</h4>
-                <p>In this paper I compare the performance of decision trees constructed by two different machine learning algorithms on binary classification problems. The first is an information-theoretic algorithm that selects for attributes which most aggressively reduce entropy in the training set. The second is a genetic algorithm that borrows the concept of natural selection to build populations of decision trees probabilistically. I show that while the performance of the algorithms is similar, the underlying flexibility of the genetic algorithm allows for broader coverage of the solution space in hope of finding a good local maximum, but at the cost of tuning its numerous parameters to that solution space.
-</p>
+                <p>In this paper I compare the performance of decision trees constructed by two different machine learning algorithms on binary classification problems. The first is an information-theoretic algorithm that selects for attributes which most aggressively reduce entropy in the training set. The second is a genetic algorithm that borrows the concept of natural selection to build populations of decision trees probabilistically. I show that while the performance of the algorithms is similar, the underlying flexibility of the genetic algorithm allows for broader coverage of the solution space in hope of finding a good local maximum, but at the cost of tuning its numerous parameters to that solution space.</p>
+
+                <p>
+                <a class="btn btn-primary hvr-sweep-to-left" href="files/decision.pdf">Read the Paper</a>
+                <a class="btn btn-primary hvr-sweep-to-left" href="https://github.com/corbyrosset/Algorithms/tree/master/ClassicalDecisionTrees">Get the Code</a>
+                </p>
             </div>
-            <a class="btn btn-primary hvr-sweep-to-left" href="files/decision.pdf">Read the Paper</a>
-            <a class="btn btn-primary hvr-sweep-to-left" href="https://github.com/corbyrosset/Algorithms/tree/master/ClassicalDecisionTrees">Get the Code</a>
         </div>
 
         <hr>
@@ -234,11 +285,14 @@
                 <h3>Respirage: A Respiratory Rate Measurement Device for Emergency Department Triage</h3>
                 <p>My biomedical engineering design team's final report summarizing the design and testing results of our medical device's prototype.</p>
                 <p>We designed a portable, non-invasive vital sign measurement device for the fast-paced environment of emergency department triage.</p>
+
+                <p>
+                <a class="btn btn-primary hvr-sweep-to-left" href="files/RRDT7.pdf">Read the Paper</a>
+                <a class="btn btn-primary hvr-sweep-to-left" href="files/RRDT7presentation.pptx">View Presentation</a>
+                <a class="btn btn-primary hvr-sweep-to-left" href="http://pages.jh.edu/~bpc/Medical%20Technology%20Undergraduate%20Track%20Finalists.html">Emsol Health</a>
+                <a class="btn btn-primary hvr-sweep-to-left" href="files/filing.pdf">View Disclosure</a>
+                </p>
             </div>
-            <a class="btn btn-primary hvr-sweep-to-left" href="files/RRDT7.pdf">Read the Paper</a>
-            <a class="btn btn-primary hvr-sweep-to-left" href="files/RRDT7presentation.pptx">View Presentation</a>
-            <a class="btn btn-primary hvr-sweep-to-left" href="http://pages.jh.edu/~bpc/Medical%20Technology%20Undergraduate%20Track%20Finalists.html">Emsol Health</a>
-            <a class="btn btn-primary hvr-sweep-to-left" href="files/filing.pdf">View Disclosure</a>
         </div>
 
         <hr>
@@ -253,9 +307,11 @@
                 <h3>MoleSniffer</h3>
                 <h4>Cancer Diagnostics Mobile App</h4>
                 <p>At the 2014 HopHacks (JHU hackathon) competition,  we developed an Android app to detect early stages of melanoma via computer vision algorithms. We placed 3rd overall, and were winners of the JHU Social Innovation Lab’s Award for the greatest impact on society, for which we were offered a spot in their startup incubator and seed funding.</p>
-            </div>
-            <a class="btn btn-primary hvr-sweep-to-left" href="http://challengepost.com/software/mole-sniffer">View Submission</a>
 
+                <p>
+                <a class="btn btn-primary hvr-sweep-to-left" href="http://challengepost.com/software/mole-sniffer">View Submission</a>
+                </p>
+            </div>
         </div>
     
         <hr>
@@ -271,9 +327,10 @@
             <div class="col-md-6">
                 <h3>MATLAB Simulation of SIR Model for Infectious Disease</h3>
                 <p>Final project for a Biomedical Modeling and Design class at JHU comprising. I implemented a MATLAB simulation of the spread of contagious diseases based on commonly used models in epidemiology. We won "highest honors" for the project out of our class.</p>
+                <p>
+                <a class="btn btn-primary hvr-sweep-to-left" href="files/ModelInfectiousDisease.pdf">View the Presentation</a>
+                </p>
             </div>
-            <a class="btn btn-primary hvr-sweep-to-left" href="files/ModelInfectiousDisease.pdf">View the Presentation</a>
-
         </div>
         <!-- /.row -->
 
@@ -288,8 +345,11 @@
             <div class="col-md-6">
                 <h3>Microstereo Lithography for 3D printing CAD objects</h3>
                 <p>A year-long project in high school with the Mechanical Engineering dept. at the UIUC to design a cheaper alternative to high-precision 3D printing. We designed a novel method to print large flat objects by polymerizing a liquid with UV radiation so that they do not bend/buckle. On my own time, I printed a working combination lock entirely out of our polymerized liquid. We presented our results at the world-famous UIUC Engineering Open House.</p>
+
+                <p>
+                <a class="btn btn-primary hvr-sweep-to-left" href="files/3D_Large_objects.pdf">Read the Paper</a>
+                </p>
             </div>
-            <a class="btn btn-primary hvr-sweep-to-left" href="files/3D_Large_objects.pdf">Read the Paper</a>
         </div>
 
         <hr>
@@ -305,9 +365,11 @@
                 <h3>Effects of Abrasion on Chlorophyll Fluorescence</h3>
                 <h4>Year long high school research project with the late Dr. Robert Clegg, former chair of the Biophysics Department at the University of Illinois Urbana-Champaign</h4>
                 <p></p>
-            </div>
-            <a class="btn btn-primary hvr-sweep-to-left" href="files/ChlorophyllFluorescence.pdf">Read the Paper</a>
 
+                <p>
+                <a class="btn btn-primary hvr-sweep-to-left" href="files/ChlorophyllFluorescence.pdf">Read the Paper</a>
+                </p>
+            </div>
         </div>
         
         <hr>
@@ -322,9 +384,11 @@
                 <h3>Special Relativity Presentation</h3>
                 <h4>Based on Stanford EPGY's Special Relativity Course I attended over the summer of 2012</h4>
                 <p>A semester capstone project for senior year independent study</p>
-            </div>
-            <a class="btn btn-primary hvr-sweep-to-left" href="files/SpecialRelativity.ppt">View Presentation</a>
 
+                <p>
+                <a class="btn btn-primary hvr-sweep-to-left" href="files/SpecialRelativity.ppt">View Presentation</a>
+                </p>
+            </div>
         </div>
 
         <hr>
@@ -339,13 +403,13 @@
                 <h3>Stabilization of Inverted, Vibrating Pendulums</h3>
                 <h4>Physics C Final Project</h4>
                 <p>A neat experiment about the stability of dynamical systems.</p>
+
+                <p>
+                <a class="btn btn-primary hvr-sweep-to-left" href="files/invertedpendulums3.ppt">View Presentation</a>
+                </p>
             </div>
-            <a class="btn btn-primary hvr-sweep-to-left" href="files/invertedpendulums3.ppt">View Presentation</a>
         </div>
 
-        
-
-    
     </div>
     
     <!-- /.container -->
