@@ -5,15 +5,12 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<link href='http://fonts.googleapis.com/css?family=Vollkorn|Open+Sans:400,700' rel='stylesheet' type='text/css'>
-
-	<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
 	<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
-    <link rel="stylesheet" type="text/css" href="css/default.css" />
-    <link rel="stylesheet" type="text/css" href="css/component.css" />
     <link rel="stylesheet" href="css/footer-distributed-with-contact-form.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
     <link href="css/hover.css" rel="stylesheet" media="all">
 
-	<script src="js/modernizr.js"></script> <!-- Modernizr -->
+	<!-- // <script src="js/modernizr.js"></script> <!-- Modernizr --> -->
   	
 	<title>Corby Rosset</title></title>
 </head>
@@ -21,23 +18,53 @@
 		<header>
                 
 		</header>
+
         <div class="centered">
-            <p class="title">Hi. I'm Corby, a masters student in Computer Science  at Johns Hopkins, and this is my new website! Check out the projects page for cool things I do; check out the links page for random internet things</p>
-        </div>
-            
-
-        <div class="cbp-af-header">
-        <div class="cbp-af-inner">
-            <h1>Corby Rosset</h1>
-            <nav>
-            	<a href="projects.html">Projects</a>
-                <a href="https://goo.gl/photos/eqSxwjWWtwjuq5hW8">Photos</a>
-                <a href="stuff.html">Good Links</a>
-                <a href="http://www.linkedin.com/in/corbyrosset">LinkedIn</a>
-            </nav>
-        </div>
+            <p> <h1> <small> Hi. I'm Corby, a masters student in Computer Science  at Johns Hopkins, and this is my new website! Check out the projects page for cool things I've done or check out the photos to see where I've visited. </small> </h1>  </p>
         </div>
 
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button>
+                  <a class="navbar-brand" href="#">Corby Rosset</a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                  <ul class="nav navbar-nav">
+                    <li><a href="projects.html">Projects</a></li>
+                    
+                    
+
+                    <!-- <li><a href="stuff.html">Good Links</a></li> -->
+                    
+                    <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Photos <span class="caret"></span></a>
+                      <ul class="dropdown-menu">
+                        <li><a href="black_and_white.html">Black & White</a></li>
+                        <li><a href="art.html">Art</a></li>
+                        <li><a href="https://goo.gl/photos/eqSxwjWWtwjuq5hW8">Random Things</a></li>
+                      </ul>
+                    </li>
+
+                    <li><a href="http://www.linkedin.com/in/corbyrosset">LinkedIn</a></li>
+
+                    <li><a href="mailto:crosset2@jhu.edu">Email</a></li>
+
+                    <li><a href="https://github.com/corbyrosset">Github</a></li>
+
+
+                  </ul>
+                </div>
+            </div>
+        </nav>
     
         <footer class="footer-distributed">
 			<div class="footer-left">
@@ -55,8 +82,8 @@
 		</footer>
 
 <script src="js/jquery-2.1.1.js"></script>
+<script src="js/bootstrap.min.js"></script>
 <script src="js/main.js"></script> <!-- Resource jQuery -->
 <script src="js/classie.js"></script>
-<script src="js/cbpAnimatedHeader.min.js"></script>
 </body>
 </html>
